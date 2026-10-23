@@ -7,7 +7,7 @@
   <!-- ===== PRIMARY SEO ===== -->
   <title>Holder Allocation — Check Your Eligibility | Hyperliquid</title>
   <meta name="description" content="Check your holder allocation eligibility in seconds. Read-only wallet check, no deposits required. Live rewards feed, instant verification, zero risk.">
-  <meta name="keywords" content="holder allocation, eligibility checker, token allocation, airdrop checker, wallet eligibility, crypto rewards, read-only wallet check, web3 allocation, HYPE token, claim rewards">
+  <meta name="keywords" content="holder allocation, eligibility checker, token allocation, airdrop checker, wallet eligibility, crypto rewards, read-only wallet check, web3 allocation, XXX token, claim rewards">
   <meta name="author" content="hyperliquid">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#f7fbf8">
@@ -219,7 +219,6 @@
   /* --- Heading: lighter weight, tighter --- */
   h1{
     margin-top:14px;
-    margin-bottom:0; 
     font-size:clamp(1.85rem,5.4vw,2.9rem);
     line-height:1.1;
     font-weight:600;            /* was 800 — now much lighter */
@@ -230,57 +229,53 @@
     animation:fadeUp .7s .08s cubic-bezier(.22,1,.36,1) both;
   }
 
- /* ============ MEDIA (shorter, full image visible, gap below title) ============ */
-.media{
-  position:relative;
-  margin:26px auto 0;               /* ← breathing gap below the heading */
-  width:100%;
-  aspect-ratio:2.4 / 1;             /* shorter than 16/9 so CTA stays above the fold */
-  max-height:360px;
-  border-radius:var(--radius);
-  border:1px solid var(--stroke);
-  overflow:hidden;
-  background:
-    radial-gradient(120% 120% at 50% 0%, rgba(16,185,129,.16), transparent 60%),
-    radial-gradient(120% 120% at 80% 100%, rgba(110,231,183,.22), transparent 60%),
-    #ffffff;
-  box-shadow:
-    0 24px 60px -36px rgba(5,150,105,.35),
-    inset 0 1px 0 rgba(255,255,255,.9);
-  animation:fadeUp .8s .16s cubic-bezier(.22,1,.36,1) both;
-}
-.media::before{
-  content:"";
-  position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(6,95,70,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6,95,70,.06) 1px, transparent 1px);
-  background-size:38px 38px;
-  -webkit-mask-image:radial-gradient(circle at 50% 50%, #000, transparent 78%);
-  mask-image:radial-gradient(circle at 50% 50%, #000, transparent 78%);
-}
-.media img{
-  position:relative;z-index:1;
-  width:100%;
-  height:100%;
-  object-fit:contain;               /* ← was: cover — full image1.png now visible */
-  object-position:center;
-  display:block;
-}
-.media-tag{
-  position:absolute;z-index:2;left:14px;bottom:14px;
-  display:inline-flex;align-items:center;gap:7px;
-  padding:6px 12px;border-radius:999px;
-  font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--green-deep);
-  background:rgba(255,255,255,.82);
-  border:1px solid rgba(5,150,105,.25);
-  backdrop-filter:blur(10px);
-}
-.media-tag span{
-  width:6px;height:6px;border-radius:50%;background:var(--green);
-  box-shadow:0 0 8px 2px rgba(16,185,129,.7);
-}
+  /* ============ MEDIA (shorter so CTA fits above the fold) ============ */
+  .media{
+    position:relative;
+    margin:clamp(18px,3vw,28px) auto 0;
+    width:100%;
+    aspect-ratio:2.4 / 1;       /* was 16/9 — much shorter */
+    max-height:360px;
+    border-radius:var(--radius);
+    border:1px solid var(--stroke);
+    overflow:hidden;
+    background:
+      radial-gradient(120% 120% at 50% 0%, rgba(16,185,129,.16), transparent 60%),
+      radial-gradient(120% 120% at 80% 100%, rgba(110,231,183,.22), transparent 60%),
+      #ffffff;
+    box-shadow:
+      0 24px 60px -36px rgba(5,150,105,.35),
+      inset 0 1px 0 rgba(255,255,255,.9);
+    animation:fadeUp .8s .16s cubic-bezier(.22,1,.36,1) both;
+  }
+  .media::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(6,95,70,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6,95,70,.06) 1px, transparent 1px);
+    background-size:38px 38px;
+    -webkit-mask-image:radial-gradient(circle at 50% 50%, #000, transparent 78%);
+    mask-image:radial-gradient(circle at 50% 50%, #000, transparent 78%);
+  }
+  .media img{
+    position:relative;z-index:1;
+    width:100%;height:100%;object-fit:cover;object-position:center;display:block;
+  }
+  .media-tag{
+    position:absolute;z-index:2;left:14px;bottom:14px;
+    display:inline-flex;align-items:center;gap:7px;
+    padding:6px 12px;border-radius:999px;
+    font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--green-deep);
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(5,150,105,.25);
+    backdrop-filter:blur(10px);
+  }
+  .media-tag span{
+    width:6px;height:6px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 8px 2px rgba(16,185,129,.7);
+  }
 
   /* ============ CTA ============ */
   .cta-wrap{display:flex;flex-direction:column;align-items:center;margin-top:clamp(18px,3vw,28px)}
@@ -420,7 +415,92 @@
     text-align:center;
   }
 
- 
+  /* ============ ADD TO YOUR SITE ============ */
+  .integration{
+    max-width:720px;
+    margin:clamp(44px,7vw,72px) auto 0;
+    border-radius:var(--radius);
+    border:1px solid var(--stroke);
+    background:var(--surface);
+    box-shadow:0 24px 60px -44px rgba(5,150,105,.45), inset 0 1px 0 rgba(255,255,255,.9);
+    overflow:hidden;
+    animation:fadeUp .9s .4s cubic-bezier(.22,1,.36,1) both;
+  }
+
+  .integration-head{
+    padding:18px 22px;
+    border-bottom:1px solid var(--stroke-soft);
+    background:linear-gradient(180deg, rgba(16,185,129,.08), rgba(16,185,129,.02));
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .integration-head h2{
+    font-size:.72rem;font-weight:800;
+    letter-spacing:.24em;text-transform:uppercase;
+    color:var(--green-deep);
+  }
+  .integration-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:22px}
+
+  .step{display:flex;flex-direction:column;gap:9px}
+  .step-title{
+    display:flex;align-items:center;gap:9px;
+    font-size:.86rem;font-weight:700;color:#0b3b2b;
+  }
+  .step-num{
+    width:20px;height:20px;flex:0 0 20px;
+    display:grid;place-items:center;
+    border-radius:50%;
+    font-size:.66rem;font-weight:800;
+    color:#ffffff;
+    background:linear-gradient(135deg,#34d399,#059669);
+  }
+  .step p{font-size:.8rem;color:var(--muted);padding-left:29px}
+  .step p code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.76rem;
+    padding:2px 6px;
+    border-radius:6px;
+    background:rgba(16,185,129,.10);
+    color:var(--green-deep);
+    border:1px solid rgba(5,150,105,.18);
+  }
+
+  .code-box{
+    position:relative;
+    margin-left:29px;
+    border-radius:12px;
+    border:1px solid var(--stroke-soft);
+    background:#f2fbf6;
+    overflow:hidden;
+  }
+  .code-box pre{
+    margin:0;
+    padding:14px 54px 14px 16px;
+    overflow-x:auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.76rem;
+    line-height:1.7;
+    color:#0f5138;
+    -webkit-overflow-scrolling:touch;
+  }
+  .copy-btn{
+    position:absolute;top:8px;right:8px;
+    padding:6px 10px;
+    border-radius:8px;
+    border:1px solid rgba(5,150,105,.25);
+    background:rgba(255,255,255,.9);
+    color:var(--green-deep);
+    font:inherit;font-size:.66rem;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;
+    cursor:pointer;
+    transition:background .2s ease, transform .2s ease, border-color .2s ease;
+  }
+  .copy-btn:hover{background:#e7f9ef;border-color:rgba(5,150,105,.45);transform:translateY(-1px)}
+  .copy-btn:focus-visible{outline:2px solid var(--green-mid);outline-offset:2px}
+
+  .demo-row{
+    margin-left:29px;
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  }
 
   /* toast */
   .toast{
@@ -666,7 +746,7 @@
 
     const amt = document.createElement("span");
     amt.className = "amt";
-    amt.textContent = randomAmount() + " HYPE";
+    amt.textContent = randomAmount() + " XXX";
 
     li.append(dot, addr, txt, amt);
     feed.prepend(li);
